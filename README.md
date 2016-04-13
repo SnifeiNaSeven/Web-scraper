@@ -1,3 +1,5 @@
-# Web scraper
-Push elements from web page source code\n
+#Web scraper
+Push elements from web page source code
+
+
 Coded in Ruby
