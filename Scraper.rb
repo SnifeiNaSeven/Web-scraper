@@ -101,7 +101,7 @@ text = text.split(" ")
 #Create Hash with all the words without prepositions
 words_freq = Hash.new
 
-prepositions = ["de","e","a","o","da","para","que","na","em","com","do","mais","um","uma","ao","os","no","ou","as","dos","nas","como","das","se","por","aos","sem","nos","ser","falta","ter","entre","lado","menos","nao","so"]
+prepositions = ["de","e","a","o","da","para","que","na","em","com","do","mais","um","uma","ao","os","no","ou","as","dos","nas","como","das","se","por","aos","sem","nos","ser","falta","ter","entre","lado","menos","nao","so","ate"]
 
 words.each do |word|
     value = words_freq[word]
