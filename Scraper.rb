@@ -2,11 +2,12 @@ require 'HTTParty'
 require 'Nokogiri'
 require 'Pry'
 
-#func not working
-def remove_sym(str,sym)
+def clean_str(str,sym_str)
     out= ""
     str.each_char do |char|
-        if char != symb
+        if sym_str.include? char 
+            out +=  " "
+        else
             out += char
         end
     end
@@ -52,9 +53,12 @@ suggestions.each do |line|
 end
 
 #Need to remove symbols like ",","!","#"...
-aux = remove_sym(aux,",")
 
-=begin
+symb=",;.:_~^ºª´`+*«»'?}=])[({/&%$§#£@!\"\\<>"
+
+aux = clean_str(aux,symb)
+
+
 aux = aux.split(" ")
 words = Hash.new
 
@@ -67,6 +71,8 @@ aux.each do |word|
     end
 end
 
-=end
+words_freq = words.sort_by {|key,value|value}
 
-Pry.start(binding)  
+words_freq = words_freq.reverse!.to_h
+
+Pry.start(binding) 
