@@ -10,7 +10,7 @@ Push elements from web page source code and generates:
   -  sugg_votes(suggestions and corresponding votes)
   -  words_votes(total of votes in suggestions where word appears)
 
-Libraries used:
+Gems used:
   -  HTTParty
   -  Nokogiri
   -  Pry
